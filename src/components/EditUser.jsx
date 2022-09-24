@@ -28,7 +28,7 @@ export default function ListUser() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.put(`http://localhost/api/user/${id}/edit`, inputs).then(function(response){
+        axios.put(`http://144.24.165.51/api/user/${id}/edit`, inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });

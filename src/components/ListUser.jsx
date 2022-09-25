@@ -10,14 +10,14 @@ export default function ListUser() {
     }, []);
 
     function getUsers() {
-        axios.get('http://144.24.165.51/users/').then(function(response) {
+        axios.get('https://1857666.xyz/users/').then(function(response) {
             console.log(response.data);
             setUsers(response.data);
         });
     }
 
     const deleteUser = (id) => {
-        axios.delete(`http://144.24.165.51/user/${id}/delete`).then(function(response){
+        axios.delete(`https://1857666.xyz/user/${id}/delete`).then(function(response){
             console.log(response.data);
             getUsers();
         });

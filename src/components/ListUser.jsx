@@ -10,7 +10,7 @@ export default function ListUser() {
     }, []);
 
     function getUsers() {
-        axios.get('https://1857666.xyz/users/').then(function(response) {
+        axios.get('https://1857666.xyz/').then(function(response) {
             console.log(response.data);
             setUsers(response.data);
         });

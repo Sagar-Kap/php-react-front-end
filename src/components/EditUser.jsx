@@ -14,7 +14,7 @@ export default function ListUser() {
     }, []);
 
     function getUser() {
-        axios.get(`https://1857666.xyz/user/${id}`).then(function(response) {
+        axios.get(`https://1857666.xyz/users/user/${id}`).then(function(response) {
             console.log(response.data);
             setInputs(response.data);
         });
@@ -28,7 +28,7 @@ export default function ListUser() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.put(`https://1857666.xyz/user/${id}/edit`, inputs).then(function(response){
+        axios.put(`https://1857666.xyz/users/user/${id}/edit`, inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });

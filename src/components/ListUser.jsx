@@ -10,13 +10,13 @@ export default function ListUser() {
     }, []);
 
     function getUsers() {
-        axios.get('https://1857666.xyz/users/users/').then(function(response) {
+        axios.get('https://1857666.xyz/users/').then(function(response) {
             setUsers(response.data);
         });
     }
 
     const deleteUser = (id) => {
-        axios.delete(`https://1857666.xyz/users/user/${id}/delete`).then(function(response){
+        axios.delete(`https://1857666.xyz/user/${id}/delete`).then(function(response){
             getUsers();
         });
     }
